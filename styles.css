@@ -1,0 +1,82 @@
+body {
+    background-color: #0b0705;
+    color: #e8ded2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Ambient glowing background gradients */
+.hero-bg-glow {
+    background: radial-gradient(circle at 75% 35%, rgba(158, 89, 56, 0.22) 0%, rgba(26, 18, 13, 0.8) 55%, rgba(11, 7, 5, 1) 100%);
+}
+
+.section-glow-left {
+    background: radial-gradient(circle at 10% 50%, rgba(158, 89, 56, 0.12) 0%, transparent 60%);
+}
+
+.section-glow-center {
+    background: radial-gradient(circle at 50% 50%, rgba(158, 89, 56, 0.1) 0%, transparent 70%);
+}
+
+/* Glassmorphism & Custom Card Styles */
+.glass-card {
+    background: rgba(30, 21, 15, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(175, 115, 78, 0.15);
+}
+
+.glass-card-hover {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+    transform: translateY(-6px);
+    border-color: rgba(198, 121, 83, 0.4);
+    box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(158, 89, 56, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0b0705;
+}
+::-webkit-scrollbar-thumb {
+    background: #261b14;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #9e5938;
+}
+
+/* Toast Animation */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%) translateX(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) translateX(-50%);
+        opacity: 1;
+    }
+}
+.animate-toast {
+    animation: slideInUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Subtle Steam Animation */
+@keyframes steam {
+    0% { transform: translateY(0) scaleX(1); opacity: 0; }
+    30% { opacity: 0.5; }
+    70% { opacity: 0.3; }
+    100% { transform: translateY(-40px) scaleX(1.4); opacity: 0; }
+}
+
+.steam-line {
+    animation: steam 3.5s infinite ease-out;
+}
+.steam-delay-1 { animation-delay: 0.7s; }
+.steam-delay-2 { animation-delay: 1.5s; }
+.steam-delay-3 { animation-delay: 2.2s; }
